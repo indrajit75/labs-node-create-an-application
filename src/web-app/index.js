@@ -39,6 +39,19 @@ app.use(
   })
 );
 
+app.use(
+    auth({
+        authorizationParams: {
+            response_type: 'code',
+        },
+        secret: SESSION_SECRET,
+        auth0Logout: true,
+        baseURL: APP_URL,
+        issuerBaseURL: ISSUER_BASE_URL,
+        clientID: CLIENT_ID,
+    })
+);
+
 const expenses = [
   {
     date: new Date(),
