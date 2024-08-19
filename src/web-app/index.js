@@ -7,7 +7,6 @@ const logger = require("morgan");
 const path = require("path");
 const { createServer } = require("http");
 const { auth } = require("express-openid-connect");
-const { auth } = require("express-openid-connect");
 
 
 const {
